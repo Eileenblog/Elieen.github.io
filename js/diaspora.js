@@ -131,7 +131,7 @@ var Diaspora = {
     },
     player: function() {
         var p = $('#audio');
-		alert(p.eq(0).data("autoplay"))
+	
         if (!p.length) {
             $('.icon-play').css({
                 'color': '#dedede',
