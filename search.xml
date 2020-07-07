@@ -21,13 +21,20 @@
   <entry>
     <title>两数之和</title>
     <url>/Elieenblog/2020/07/07/title/</url>
-    <content><![CDATA[<p>代码后面补</p>
+    <content><![CDATA[<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个整数，并返回他们的数组下标。</p>
+<p><em>示例</em></p>
+<blockquote>
+<p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]。</p>
+</blockquote>
+<h3 id="Hash表解决方案"><a href="#Hash表解决方案" class="headerlink" title="Hash表解决方案"></a>Hash表解决方案</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">       Map&lt;Integer,Integer&gt; map=<span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">           <span class="keyword">int</span> temp=target-nums[i];</span><br><span class="line">           <span class="keyword">if</span> (map.containsKey(temp))&#123;</span><br><span class="line">               <span class="keyword">return</span>  <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;map.get(temp),i&#125;;</span><br><span class="line">           &#125;</span><br><span class="line">           map.put(nums[i],i);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
 ]]></content>
       <categories>
         <category>-算法</category>
       </categories>
       <tags>
-        <tag>-算法</tag>
+        <tag>-Java -hash表 -算法</tag>
       </tags>
   </entry>
 </search>
